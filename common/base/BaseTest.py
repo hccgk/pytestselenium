@@ -5,8 +5,7 @@ from utils.configsUtil import configer
 
 
 class BaseTest(object):
-    def __init__(self):
-        self.driver = None
+
 
     # def __int__(self,driver=None):
     #     if driver is None:
