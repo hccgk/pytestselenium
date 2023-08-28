@@ -9,7 +9,7 @@ if __name__ == '__main__':
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()
-    driver.implicitly_wait(30)
+    driver.implicitly_wait(20)
     driver.get("https://www.smzdm.com/")
     # driver.maximize_window()
     yield driver

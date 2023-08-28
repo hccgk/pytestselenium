@@ -8,7 +8,8 @@ import openpyxl
 
 
 def read_excel():
-    workbook = openpyxl.load_workbook('../data.xlsx')
+    workbook = openpyxl.load_workbook('data.xlsx')
+    # workbook = openpyxl.load_workbook('../data.xlsx')
     sheet = workbook['serlogin']
     print(sheet.max_row, sheet.max_column)
     listdict = []
