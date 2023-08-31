@@ -15,7 +15,10 @@ from utils.httpclient import send_request
 def test_loginWithExcel(case):
     me = case['method']
     url = case['url']
-    body = json.loads(case['body'])
+    # 方式一：eval将字符串转换为Python表达式
+    body = eval(case['body'])
+    # 方式二：json.loads将JSON字符串转换为Python字典
+    # body = json.loads(case['body'])
     result = send_request(me, url, body)
     print(result.json())
     print(case['expected'])
